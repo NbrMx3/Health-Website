@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Info Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Medical Info Hub</h1>
+    </header>
+    <nav class="navbar">
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="menu-icon" id="menuIcon">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-item">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#services" class="nav-item">Services</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+      <section id="home">
+        <h1>Welcome to the Homepage</h1>
+        <p><b>...........</b></p>
+      </section>
+      <section id="about">
+        <h1>About Us</h1>
+        <p>This health website is your go-to resource for practical health tips and self-assessment tools. Designed with simplicity in mind.</p>
+      </section>
+      <section id="services">
+        <h1>Our Services</h1>
+        <p>This is the services section.</p>
+      </section>
+      <section id="contact">
+        <h1>Contact Us</h1>
+        <p> phone contact +254710393746      Email us Kipkemoi386@gmail.com.</p>
+      </section>
+    </header>
+    
+     <!-- Search Bar with Icon -->
+     <div class="search-container">
+        <input type="text" id="searchBar" onkeyup="searchDisease()" placeholder="Search for the disease...">
+        <button id="searchButton" onclick="searchDisease()">
+          <!-- Inline SVG for search icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 
+                     6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 
+                     4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 
+                     5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/>
+          </svg>
+        </button>
+      </div>
+    
+    <section id="disease-info">
+        <h2>Diseases and Treatments</h2>
+        <div class="disease" id="flu">
+            <h3>Influenza (Flu)</h3>
+            <img src="images/influ.jpg" alt="Influenza patient"
+            <p><strong>Symptoms:</strong> Fever, cough, sore throat, muscle aches.</p>
+            <p><strong>Treatment:</strong> Rest, fluids, antiviral medication.</p>
+        </div>
+        
+        <div class="disease" id="diabetes">
+            <h3>Diabetes</h3>
+            <img src="images/dia.jpg" alt="Diabetes Patient"
+            <p><strong>Symptoms:</strong> Frequent urination, excessive thirst, fatigue.</p>
+            <p><strong>Treatment:</strong> Insulin therapy, diet control, exercise.</p>
+            <div class="container">
+                <h2>Diabetes Tracker</h2>
+                <input type="number" id="glucose" placeholder="Enter blood sugar level (mg/dL)">
+                <input type="text" id="meal" placeholder="Meal Description">
+                <input type="text" id="exercise" placeholder="Exercise Duration & Type">
+                <button onclick="addEntry()">Add Entry</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Glucose (mg/dL)</th>
+                            <th>Meal</th>
+                            <th>Exercise</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="disease" id="hypertension">
+            <h3>Hypertension</h3>
+            <img src="images/hyper.jpg" alt="Hypertension Patient"
+            <p><strong>Symptoms:</strong> Headache, dizziness, shortness of breath.</p>
+            <p><strong>Treatment:</strong> Medication, lifestyle changes.</p>
+        </div>
+        <div class="disease" id="asthma">
+            <h3>Asthma</h3>
+            <img src="images/asthma.jpg" alt="Asthma Patient"
+            <p><strong>Symptoms:</strong> Shortness of breath, wheezing, coughing.</p>
+            <p><strong>Treatment:</strong> Inhalers, medication, avoiding triggers.</p>
+        </div>
+        
+        <div class="disease" id="covid-19">
+            <h3>Covid-19</h3>
+            <img src="covid.jpg" alt="Covid-19 Patient"
+            <p><strong>Symptoms:</strong> Fever, cough, loss of taste or smell.</p>
+            <p><strong>Treatment:</strong> Supportive care, vaccination, antiviral drugs.</p>
+        </div>
+        
+        <div class="disease" id="cancer">
+            <h3>Cancer</h3>
+            <img src="images/cancer.jpg" alt="Cancer Patient"
+            <p><strong>Symptoms:</strong> Unexplained weight loss, fatigue, pain.</p>
+            <p><strong>Treatment:</strong> Chemotherapy, radiation, surgery.</p>
+            <h1>Improving Cancer Survival Rate in Kenya</h1>
+            <p class="subtitle">Key Strategies to Improve Survival Rates by Even 1%</p>
+          </header>
+        
+          <button class="accordion">1. Early Detection & Screening</button>
+          <div class="panel">
+            <p><strong>Increase Awareness:</strong> Launch nationwide campaigns to educate people about cancer symptoms, risk factors, and the importance of early screening.</p>
+            <p><strong>Expand Screening Programs:</strong> Provide free or subsidized screening services, especially for cancers such as breast, cervical, and prostate.</p>
+            <p><strong>Community Health Workers:</strong> Train and deploy community health workers to conduct outreach and encourage screening.</p>
+          </div>
+        
+          <button class="accordion">2. Improve Access to Treatment</button>
+          <div class="panel">
+            <p><strong>Expand Cancer Treatment Centers:</strong> Strengthen regional cancer centers to ease the burden on major hospitals.</p>
+            <p><strong>Affordable Chemotherapy & Radiotherapy:</strong> Collaborate with pharmaceutical companies and the government to reduce treatment costs.</p>
+            <p><strong>Health Insurance Coverage:</strong> Advocate for expanded NHIF (National Health Insurance Fund) coverage for cancer treatment.</p>
+          </div>
+        
+          <button class="accordion">3. Strengthen Healthcare Infrastructure</button>
+          <div class="panel">
+            <p><strong>Increase Oncologists & Specialists:</strong> Train more oncologists, pathologists, and radiologists to reduce the patient backlog.</p>
+            <p><strong>Improve Diagnostic Facilities:</strong> Invest in better pathology labs to ensure timely and accurate diagnoses.</p>
+            <p><strong>Decentralize Services:</strong> Strengthen county-level hospitals to offer chemotherapy and radiotherapy.</p>
+          </div>
+        
+          <button class="accordion">4. Improve Patient Support & Palliative Care</button>
+          <div class="panel">
+            <p><strong>Nutritional & Psychological Support:</strong> Offer support programs to help improve treatment adherence.</p>
+            <p><strong>Palliative Care Access:</strong> Expand hospice and palliative care services for patients with advanced cancer.</p>
+          </div>
+        
+          <button class="accordion">5. Policy & Research</button>
+          <div class="panel">
+            <p><strong>Stronger Cancer Registry:</strong> Improve data collection to effectively track cancer cases and survival rates.</p>
+            <p><strong>Tobacco & Alcohol Control:</strong> Strengthen policies against tobacco, alcohol, and other carcinogens.</p>
+          </div>
+        </div>
+        
+        <div class="disease" id="arthritis">
+            <h3>Arthritis</h3>
+            <img src="images/arthritis.jpg" alt="Arthritis Patient"
+            <p><strong>Symptoms:</strong> Joint pain, stiffness, swelling.</p>
+            <p><strong>Treatment:</strong> Pain relief, physical therapy.</p>
+        </div>
+        
+        <div class="disease" id="alzheimer">
+            <h3>Alzheimer's Disease</h3>
+            <img src="images/alzheimer.jpg" alt="Alzherimer Patient"
+            <p><strong>Symptoms:</strong> Memory loss, confusion.</p>
+            <p><strong>Treatment:</strong> Medications, cognitive therapy.</p>
+            <div class="container">
+                <h2>Alzheimer's Care Tracker</h2>
+                <input type="text" id="symptoms" placeholder="Enter observed symptoms">
+                <input type="text" id="medication" placeholder="Medication & Dosage">
+                <input type="text" id="activities" placeholder="Cognitive Activities">
+                <button onclick="addEntry()">Add Entry</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Symptoms</th>
+                            <th>Medication</th>
+                            <th>Activities</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="disease" id="tuberculosis">
+            <h3>Tuberculosis</h3>
+            <img src="images/tuberclousis.jpg" alt="Tuberculosis Patient"
+            <p><strong>Symptoms:</strong> Persistent cough, weight loss, night sweats.</p>
+            <p><strong>Treatment:</strong> Antibiotic therapy.</p>
+        </div>
+        
+        <div class="disease" id="malaria">
+            <h3>Malaria</h3>
+            <img src="images/mlaria.jpg" alt="Malaria Patient"
+            <p><strong>Symptoms:</strong> Fever, chills, nausea, vomiting.</p>
+            <p><strong>Treatment:</strong> Antimalarial drugs.</p>
+        </div>
+        
+        <div class="disease" id="pneumonia">
+            <h3>Pneumonia</h3>
+            <img src="images/pneumonia.jpg" alt="Pneumonia Patient"
+            <p><strong>Symptoms:</strong> Cough, chest pain, fever, difficulty breathing.</p>
+            <p><strong>Treatment:</strong> Antibiotics, oxygen therapy.</p>
+        </div>
+    </section>
+    
+    <section id="medical-team">
+        <h2>Our Medical Team</h2>
+        <img src="images/doct.jpg" alt="Doctor">
+        <p></p><strong>Doctors</strong></p>
+        <img src="images/nurse.jpg" alt="Nurse">
+       <p> <strong>Nurses</strong></p>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
