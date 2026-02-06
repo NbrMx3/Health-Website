@@ -10,11 +10,15 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 nav {
     background: #005f73;
     padding: 10px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 nav a {
     color: white;
@@ -32,6 +36,7 @@ nav a {
     padding: 10px;
     width: 80%;
     max-width: 400px;
+    box-sizing: border-box;
 }
 .img{
     border-radius: 100vh;
@@ -41,8 +46,10 @@ nav a {
 .disease img {
     width: 100%;
     max-width: 300px;
+    height: auto;
     border-radius: 10px;
     margin-top: 10px;
+    object-fit: cover;
 }
 .disease {
     background: white;
@@ -50,9 +57,14 @@ nav a {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 #medical-team img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     margin: 10px;
     border-radius: 10px;
 }
@@ -64,14 +76,33 @@ nav a {
     box-sizing: border-box;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
   body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
     background-color: #f4f4f4;
 }
+
+/* Table wrapper for horizontal scroll on mobile */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 15px 0;
+}
+
+/* Image responsive defaults */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 500px;
+    width: 95%;
     margin: auto;
     background: white;
     padding: 20px;
@@ -82,6 +113,7 @@ input, button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+    box-sizing: border-box;
 }
 table {
     width: 100%;
@@ -235,6 +267,10 @@ th, td {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+    min-height: 44px;
+    line-height: 24px;
   }
   
   /* Responsive Styling for Mobile Devices */
@@ -260,4 +296,912 @@ th, td {
     }
   }
 
- 
+/* Feature Sections */
+.feature-section {
+    background: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #008cba;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Calculator & Tracker Containers */
+.calculator-container, .tracker-container, .symptom-container {
+    max-width: 500px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #008cba;
+    outline: none;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 50px;
+}
+
+.result-normal { background: #d4edda; color: #155724; }
+.result-warning { background: #fff3cd; color: #856404; }
+.result-danger { background: #f8d7da; color: #721c24; }
+
+/* Health Tips Grid */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tip-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+/* Emergency Section */
+.emergency-section {
+    background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+    color: white;
+}
+
+.emergency-section h2 {
+    color: white;
+    border-bottom-color: white;
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.emergency-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.emergency-number {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Symptom Checker */
+.symptom-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.symptom-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.symptom-checkboxes label:hover {
+    background: #dee2e6;
+}
+
+.symptom-checkboxes input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #008cba;
+}
+
+/* Blood Pressure Table */
+#bp-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#bp-table th, #bp-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#bp-table th {
+    background: #008cba;
+    color: white;
+}
+
+#bp-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #95a5a6;
+}
+
+/* Button Styles */
+.feature-section button, .calculator-container button, .tracker-container button, .symptom-container button {
+    background: linear-gradient(135deg, #008cba 0%, #005f73 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 44px; /* Minimum touch target size for mobile */
+    min-width: 44px;
+}
+
+.feature-section button:hover, .calculator-container button:hover, .tracker-container button:hover, .symptom-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 140, 186, 0.4);
+}
+
+/* Water Tracker */
+.water-container {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.water-visual {
+    margin: 20px 0;
+}
+
+.water-bottle {
+    width: 100px;
+    height: 200px;
+    border: 4px solid #3498db;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: #ecf0f1;
+}
+
+.water-level {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #74b9ff, #0984e3);
+    transition: height 0.5s ease;
+}
+
+.water-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.water-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.water-btn.add { background: #27ae60; color: white; }
+.water-btn.remove { background: #e74c3c; color: white; }
+.water-btn.reset { background: #95a5a6; color: white; }
+.water-btn:hover { transform: scale(1.05); }
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Heart Rate Zones */
+.heart-rate-zones {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.hr-zone {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.hr-zone.rest { background: #3498db; }
+.hr-zone.fat-burn { background: #2ecc71; }
+.hr-zone.cardio { background: #f39c12; }
+.hr-zone.peak { background: #e74c3c; }
+
+/* First Aid Guide */
+.first-aid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.first-aid-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #e74c3c;
+}
+
+.first-aid-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.first-aid-card ol {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.first-aid-card li {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Mental Health Assessment */
+.mental-health-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.mh-question {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.mh-question p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.mh-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mh-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.mh-options label:hover {
+    background: #e9ecef;
+}
+
+.mh-resources {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f4fd;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.mh-resources h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Quiz Styles */
+.quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.quiz-question {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz-option {
+    padding: 15px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+.quiz-option:hover {
+    border-color: #3498db;
+    background: #e8f4fd;
+}
+
+.quiz-option.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.quiz-option.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.quiz-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.quiz-score {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+/* Nutrition Grid */
+.nutrition-search {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.nutrition-search input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.nutrition-search input:focus {
+    border-color: #27ae60;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nutrition-card {
+    background: linear-gradient(135deg, #fff 0%, #f0fff4 100%);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid #27ae60;
+    transition: transform 0.3s;
+}
+
+.nutrition-card:hover {
+    transform: translateY(-3px);
+}
+
+.nutrition-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.nutrition-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Appointment List */
+#upcoming-appointments {
+    margin-top: 20px;
+}
+
+#upcoming-appointments h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.appointment-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.appointment-info h4 {
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+}
+
+.appointment-info p {
+    margin: 2px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+textarea:focus {
+    border-color: #008cba;
+    outline: none;
+}
+
+/* Tables */
+#sleep-table, #med-table, #workout-table, #vaccine-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#sleep-table th, #med-table th, #workout-table th, #vaccine-table th {
+    background: #008cba;
+    color: white;
+    padding: 12px;
+}
+
+#sleep-table td, #med-table td, #workout-table td, #vaccine-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+#sleep-table tr:hover, #med-table tr:hover, #workout-table tr:hover, #vaccine-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Delete buttons in tables */
+table button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table button:hover {
+    background: #c0392b;
+}
+
+/* ================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ================================ */
+
+/* Tablet & Small Desktop (max 1024px) */
+@media screen and (max-width: 1024px) {
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .disease {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    .feature-section {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    .tips-grid, .emergency-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Tablet (max 768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+        padding: 15px;
+    }
+    
+    .disease {
+        margin: 10px;
+        padding: 12px;
+    }
+    
+    .disease h3 {
+        font-size: 1.3em;
+    }
+    
+    .disease img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .feature-section {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .feature-section h2 {
+        font-size: 1.5em;
+    }
+    
+    .calculator-container, .tracker-container, .symptom-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .tips-grid, .emergency-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .first-aid-grid, .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .appointment-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .water-buttons {
+        flex-direction: column;
+    }
+    
+    /* Table Responsive */
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px 4px;
+    }
+    
+    /* Search container */
+    .search-container input {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+/* Mobile (max 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+        padding: 12px;
+    }
+    
+    nav a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+    
+    .nav-links a {
+        font-size: 16px;
+    }
+    
+    .disease {
+        margin: 8px;
+        padding: 10px;
+    }
+    
+    .disease h3 {
+        font-size: 1.2em;
+    }
+    
+    .disease p, .disease ul {
+        font-size: 14px;
+    }
+    
+    .feature-section {
+        margin: 8px;
+        padding: 12px;
+    }
+    
+    .feature-section h2 {
+        font-size: 1.3em;
+    }
+    
+    .calculator-container, .tracker-container, .symptom-container {
+        padding: 12px;
+        margin: 10px auto;
+        max-width: 95%;
+    }
+    
+    .input-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .result-box {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .tip-card {
+        padding: 15px;
+    }
+    
+    .tip-card h3 {
+        font-size: 1.1em;
+    }
+    
+    /* Tables - Stack on very small screens */
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 6px 3px;
+        font-size: 12px;
+    }
+    
+    /* Hide long text with ellipsis on small screens */
+    .disease ul li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Search container */
+    .search-container {
+        margin: 10px 5px;
+        padding: 10px;
+    }
+    
+    .search-container input {
+        width: 95%;
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    /* Emergency numbers */
+    .emergency-number {
+        font-size: 1.2em;
+    }
+    
+    /* Symptom checker */
+    .symptom-checkboxes {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .symptom-checkboxes label {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    /* Quiz radio buttons */
+    .radio-group label {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    /* Water tracker */
+    .water-progress {
+        font-size: 14px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile (max 360px) */
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 1.3em;
+        padding: 10px;
+    }
+    
+    .feature-section h2 {
+        font-size: 1.1em;
+    }
+    
+    .disease h3 {
+        font-size: 1.1em;
+    }
+    
+    button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
