@@ -3,23 +3,25 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+    background: linear-gradient(135deg, #1a237e 0%, #0d1b3e 100%);
+    color: #fff;
 }
 header {
-    background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+    background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
     color: white;
     padding: 20px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 nav {
-    background: #003d66;
+    background: linear-gradient(135deg, #1a237e 0%, #0d1641 100%);
     padding: 10px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 nav a {
     color: white;
@@ -29,11 +31,12 @@ nav a {
 }
 .search-container {
     text-align: center;
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background: linear-gradient(135deg, #3949ab 0%, #303f9f 100%);
     margin: 20px;
     padding: 15px;
-    border-radius: 10px;
-    color: black;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .search-container input {
     padding: 10px;
@@ -55,20 +58,29 @@ nav a {
     object-fit: cover;
 }
 .disease {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
     margin: 20px;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 3px 15px rgba(0, 102, 204, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #1a237e;
+}
+
+.disease h3 {
+    color: #1a237e;
+}
+
+.disease p, .disease ul {
+    color: #424242;
 }
 
 .disease:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 25px rgba(0, 102, 204, 0.15);
+    box-shadow: 0 8px 30px rgba(63, 81, 181, 0.4);
 }
 #medical-team img {
     width: 100%;
@@ -93,7 +105,7 @@ html {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
-    background-color: #fafbfc;
+    background-color: #1a237e;
 }
 
 /* Table wrapper for horizontal scroll on mobile */
@@ -113,10 +125,10 @@ img {
     max-width: 500px;
     width: 95%;
     margin: auto;
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 input, button {
     width: 100%;
@@ -138,8 +150,8 @@ th, td {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
-    background-color: #f5f7fa;
-    color: black;
+    background-color: #1a237e;
+    color: white;
 }
 .container {
     max-width: 500px;
@@ -188,7 +200,7 @@ th, td {
   }
   /* Accordion styles */
   .accordion {
-    background-color: #0066cc;
+    background: linear-gradient(135deg, #3949ab 0%, #283593 100%);
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -200,9 +212,10 @@ th, td {
     transition: background-color 0.3s ease;
     margin: 10px 0;
     border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
   .accordion:hover, .accordion.active {
-    background-color: #0052a3;
+    background: linear-gradient(135deg, #303f9f 0%, #1a237e 100%);
   }
   .panel {
     background-color: #f8f9fa;
@@ -223,13 +236,14 @@ th, td {
   
   /* Navbar Styling */
   .navbar {
-    background: linear-gradient(135deg, #003d66 0%, #002b4a 100%);
+    background: linear-gradient(135deg, #1a237e 0%, #0d1641 100%);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     position: relative;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   }
   
   /* Hamburger Icon Styles */
@@ -288,13 +302,13 @@ th, td {
       position: absolute;
       top: 60px;
       right: 0;
-      background: linear-gradient(135deg, #003d66 0%, #002b4a 100%);
+      background: linear-gradient(135deg, #1a237e 0%, #0d1641 100%);
       width: 200px;
       flex-direction: column;
       align-items: flex-start;
       padding: 20px;
       display: none;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
   
     .nav-links.open {
@@ -308,17 +322,17 @@ th, td {
 
 /* Feature Sections */
 .feature-section {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
     margin: 20px;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.08);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 .feature-section h2 {
-    color: #003d66;
+    color: #1a237e;
     margin-bottom: 15px;
-    border-bottom: 3px solid #0066cc;
+    border-bottom: 3px solid #3949ab;
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -329,9 +343,10 @@ th, td {
     width: 95%;
     margin: 20px auto;
     padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%);
+    border-radius: 15px;
     box-sizing: border-box;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 .input-group {
@@ -343,7 +358,7 @@ th, td {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: #1a237e;
 }
 
 .input-group input {
@@ -356,9 +371,9 @@ th, td {
 }
 
 .input-group input:focus {
-    border-color: #0066cc;
+    border-color: #3949ab;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.2);
 }
 
 .result-box {
